@@ -4,35 +4,34 @@ public class DeleteColumns {
 //LeetCode, 944. Delete Columns to Make Sorted
 
     DeleteColumns(){
-        String[] strs = {"zyx", "wvu", "tsr"};
+        String[] strs = {"rrjk","furt","guzm"};
+                //{"zyx", "wvu", "tsr"};
         int ans = minDeletionSize(strs);
-        print(this.getClass().getSimpleName());
         print("ans: " + ans);
     }
 
     public int minDeletionSize(String[] strs) {
-        int row = 0;
-        int col;
+        int strsLen = strs.length;
+        int strLen = strs[0].length();
+
         int delCol = 0;
-
-        int strLen = strs.length;
-        int strsLen = strs[0].length();
-
-
-        while(row < strLen-1){
-            col = 0;
-            while(col < strsLen){
-                print(strs[row].charAt(col) + " > " + strs[row+1].charAt(col));
+        int col = 0;
+        while(col < strLen){
+            //print("col: " + col);
+            int row = 0;
+            while(row < strsLen-1){
+                //print("row: " + row);
                 if(strs[row].charAt(col) > strs[row+1].charAt(col)){
+                    //print(strs[row].charAt(col) + " > " + strs[row+1].charAt(col));
                     delCol++;
-                    col = 0;
+                    row = strsLen;
+                }else {
                     row++;
-                    break;
                 }
-                col++;
             }
-            row++;
+            col++;
         }
+
         return delCol;
     }
 

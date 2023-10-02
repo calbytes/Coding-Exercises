@@ -3,8 +3,9 @@ public class Main {
     public static void main(String[] args) {
         try{
             String className = "DeleteColumns";
-            Class<?> newClass = Class.forName(className);
-            newClass.newInstance();
+            Class<?> targetClass = Class.forName(className);
+            print("Invoking the constructor for class: " +
+            targetClass.newInstance().getClass().getSimpleName());
         }catch(Exception e) {
             print(e);
         }
