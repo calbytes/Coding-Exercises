@@ -2,7 +2,7 @@ public class Main {
 
     public static void main(String[] args) {
         try{
-            String className = "DeleteColumns";
+            String className = "PathSum1";
             Class<?> targetClass = Class.forName(className);
             print("Invoking the constructor for class: " +
             targetClass.newInstance().getClass().getSimpleName());
