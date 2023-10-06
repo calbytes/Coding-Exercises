@@ -1,6 +1,6 @@
 public class PathSum1 {
 //LeetCode, 112. Path Sum
-     public class TreeNode {
+     private class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;

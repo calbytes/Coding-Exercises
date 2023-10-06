@@ -28,12 +28,6 @@ public class PathSumIII {
 
 
 
-
-
-    public void print(String str){
-        System.out.println(str);
-    }
-
     public PathSumIII(){
         TreeNode left = new TreeNode(2);
         TreeNode root = new TreeNode(1, left, null);
@@ -47,7 +41,7 @@ public class PathSumIII {
         TreeNode leaf = new TreeNode(5);
         leftLeaf.left = leaf;
         int ans = pathSum(root, 3);
-        print("paths: " + ans);
+        Main.print("paths: " + ans);
     }
 
 

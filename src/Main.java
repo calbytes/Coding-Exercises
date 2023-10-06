@@ -2,10 +2,10 @@ public class Main {
 
     public static void main(String[] args) {
         try{
-            String className = "PathSum1";
+            String className = "PathSum2";
+            print("Invoking the constructor for: " + className);
             Class<?> targetClass = Class.forName(className);
-            print("Invoking the constructor for class: " +
-            targetClass.newInstance().getClass().getSimpleName());
+            targetClass.newInstance();
         }catch(Exception e) {
             print(e);
         }
