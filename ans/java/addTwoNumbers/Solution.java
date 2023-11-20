@@ -1,4 +1,4 @@
-package addTwoNumbers;
+package java.addTwoNumbers;
 
 import java.util.ArrayList;
 import java.util.Collections;
